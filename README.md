@@ -16,4 +16,4 @@ Explain any prerequisites if any. Mention the supported SDK version.
 https://www.b4x.com/b4a.html \
 (Any issue, please join the developer community: https://www.b4x.com/android/forum/)
 2. After completed the installation, open the project directory "<project-name>\B4A" cloned from github.
-3. Open the project file "<project-name>.b4j" and click Run (play button).
+3. Open the project file "<project-name>.b4a" and click Run (play button).
