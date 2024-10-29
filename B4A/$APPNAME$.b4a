@@ -51,7 +51,11 @@ Sub Activity_ActionBarHomeClick
 End Sub
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean
-	Return B4XPages.Delegate.Activity_KeyPress(KeyCode)
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+		Return B4XPages.Delegate.Activity_KeyPress(KeyCode)
+	End If
+	B4XPages.GetManager.RaiseEvent(B4XPages.GetManager.GetTopPage, "B4XPage_KeyPress", Array(KeyCode))
+	Return False
 End Sub
 
 Sub Activity_Resume
