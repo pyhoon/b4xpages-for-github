@@ -8,11 +8,10 @@ Module1=|relative|..\B4XMainPage
 NumberOfFiles=1
 NumberOfLibraries=2
 NumberOfModules=1
-Version=8.51
+Version=8.8
 @EndOfDesignText@
-'Code module
-#Region  Project Attributes 
-	#ApplicationLabel: B4i Example
+#Region Project Attributes 
+	#ApplicationLabel: App
 	#Version: 1.0.0 
 	'Orientation possible values: Portrait, LandscapeLeft, LandscapeRight and PortraitUpsideDown
 	#iPhoneOrientations: Portrait, LandscapeLeft, LandscapeRight
@@ -20,12 +19,19 @@ Version=8.51
 	#Target: iPhone, iPad
 	#ATSEnabled: True
 	#MinVersion: 11
+	#If RELEASE
+	#CertificateFile: ios_distribution.cer
+	#ProvisionFile: Distribution.mobileprovision
+	'#ProvisionFile: Store.mobileprovision
+	#Else
+	#CertificateFile: ios_development.cer
+	#ProvisionFile: Development.mobileprovision
+	#End If	
 #End Region
 
 Sub Process_Globals
 	Public App As Application
 	Public NavControl As NavigationController
-
 End Sub
 
 Private Sub Application_Start (Nav As NavigationController)
