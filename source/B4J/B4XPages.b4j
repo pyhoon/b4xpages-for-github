@@ -12,12 +12,40 @@ NumberOfLibraries=3
 NumberOfModules=1
 Version=10.5
 @EndOfDesignText@
-#Region Project Attributes
-	'#ApplicationLabel: B4J
-	#MainFormWidth: 600
-	#MainFormHeight: 600 
+'Product: Product Name
+'Version: 1.00
+'Platform: B4J
+'License: Unlicensed
+'Developer: Your Name
+#Region  Project Attributes
+#MainFormWidth: 600
+#MainFormHeight: 600 
 #End Region
 
+#Region  Additional Jars
+'#AdditionalJar: 
+#End Region
+
+#Region  Create Template
+'Step 1 - Create $APPNAME$ for all platforms
+#Macro: Title, Create .b4a, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\B4A\B4XPages.b4a&Args=%PROJECT%\..\B4A\$APPNAME$.b4a
+#Macro: Title, Create .b4i, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\B4i\B4XPages.b4i&Args=%PROJECT%\..\B4i\$APPNAME$.b4i
+#Macro: Title, Create .b4j, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\B4XPages.b4j&Args=%PROJECT%\$APPNAME$.b4j
+'Step 2 - Open $APPNAME$.b4j
+'#Macro: Title, Open .b4a, ide://run?File=%WINDIR%\explorer.exe&Args=%PROJECT%\..\B4A\$APPNAME$.b4a
+'#Macro: Title, Open .b4i, ide://run?File=%WINDIR%\explorer.exe&Args=%PROJECT%\..\B4i\$APPNAME$.b4i
+#Macro: Title, Open .b4j, ide://run?File=%WINDIR%\explorer.exe&Args=%PROJECT%\$APPNAME$.b4j
+'Step 3 - Remove #Region Create Template in .b4j
+'Step 4 - Create B4XPages (GitHub).b4xtemplate
+'#Macro: Title, Pack B4XPages (GitHub).b4xtemplate, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..&Args=-cMf&Args=%PROJECT%\..\release\B4XPages+(GitHub).b4xtemplate&Args=Files&Args=$APPNAME$.*&Args=..\*.bas
+#Macro: Title, Pack B4XPages (GitHub).b4xtemplate, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..\..&Args=-cMf&Args=..\release\B4XPages+(GitHub).b4xtemplate&Args=B4XMainPage.bas&Args=B4A\$APPNAME$.*&Args=B4A\Files&Args=B4i\$APPNAME$.*&Args=B4i\Files&Args=B4J\$APPNAME$.*&Args=B4J\Files&Args=Shared+Files
+'Step 5 - Check Release folder
+#Macro: Title, Check Release folder, ide://run?File=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
+'#Macro: Title, Check Release Folder, ide://run?File=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
+'Step 6 - Copy to B4J Additional Libraries folder
+#Macro: Title, Copy to B4X AddLibs, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\..\release\B4XPages+(GitHub).b4xtemplate&Args=%ADDITIONAL%
+'#Macro: Title, Copy to B4X AddLibs, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\..\release\B4X+Library.b4xtemplate&Args=%ADDITIONAL%
+#End Region
 Sub Process_Globals
 	Private fx As JFX
 	Private MainForm As Form
@@ -30,8 +58,8 @@ Sub AppStart (Form1 As Form, Args() As String)
 	PagesManager.Initialize(MainForm)
 End Sub
 
-'Template version: B4J-1.0
-#Region Delegates
+'Template version: B4J-1.13
+#Region  Delegates
 Sub MainForm_FocusChanged (HasFocus As Boolean)
 	B4XPages.Delegate.MainForm_FocusChanged(HasFocus)
 End Sub
