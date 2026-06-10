@@ -39,7 +39,7 @@ Version=10.5
 'Step 4 - Create B4XPages (GitHub).b4xtemplate
 #Macro: Title, Pack B4XPages (GitHub).b4xtemplate, ide://run?File=%JAVABIN%\jar.exe&WorkingDirectory=..\..&Args=-cMf&Args=..\release\B4XPages+(GitHub).b4xtemplate&Args=B4XMainPage.bas&Args=.gitattributes&Args=B4A\$APPNAME$.*&Args=B4A\.gitignore&Args=B4A\Files&Args=B4i\$APPNAME$.*&Args=B4i\.gitignore&Args=B4i\Files&Args=B4J\$APPNAME$.*&Args=B4J\.gitignore&Args=B4J\Files&Args=Shared+Files
 'Step 5 - Check Release folder
-'#Macro: Title, Check Release folder, ide://run?File=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
+#Macro: Title, Check Release folder, ide://run?File=%WINDIR%\SysWOW64\explorer.exe&Args=%PROJECT%\..\..\release
 'Step 6 - Copy to B4J Additional Libraries folder
 #Macro: Title, Copy to B4X AddLibs, ide://run?File=%COMSPEC%&Args=/c&Args=copy&Args=%PROJECT%\..\..\release\B4XPages+(GitHub).b4xtemplate&Args=%ADDITIONAL%\..\B4X
 #End Region
