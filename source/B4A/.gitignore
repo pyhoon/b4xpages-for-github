@@ -3,7 +3,8 @@
 *.zip
 
 # ignore ALL files in these directories
-AutoBackups/
+AutoBackups
+JsonLayouts
 
 # Include icon.png inside drawable
 Objects/*

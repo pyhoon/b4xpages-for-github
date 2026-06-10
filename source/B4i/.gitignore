@@ -3,5 +3,6 @@
 *.zip
 
 # ignore ALL files in these directories
-AutoBackups/
-Objects/
+AutoBackups
+JsonLayouts
+Objects
