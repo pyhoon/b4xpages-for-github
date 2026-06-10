@@ -10,8 +10,13 @@ NumberOfLibraries=2
 NumberOfModules=1
 Version=8.8
 @EndOfDesignText@
-#Region Project Attributes 
-	#ApplicationLabel: App
+'Product: Product Name
+'Version: 1.00
+'Platform: B4i
+'License: Unlicensed
+'Developer: Your Name
+#Region  Project Attributes
+	#ApplicationLabel: B4i
 	#Version: 1.0.0 
 	'Orientation possible values: Portrait, LandscapeLeft, LandscapeRight and PortraitUpsideDown
 	#iPhoneOrientations: Portrait, LandscapeLeft, LandscapeRight
@@ -19,6 +24,9 @@ Version=8.8
 	#Target: iPhone, iPad
 	#ATSEnabled: True
 	#MinVersion: 11
+#End Region
+
+#Region  Certificate/Provision
 	#If RELEASE
 	#CertificateFile: ios_distribution.cer
 	#ProvisionFile: Distribution.mobileprovision
@@ -28,7 +36,6 @@ Version=8.8
 	#ProvisionFile: Development.mobileprovision
 	#End If	
 #End Region
-
 Sub Process_Globals
 	Public App As Application
 	Public NavControl As NavigationController
@@ -40,8 +47,8 @@ Private Sub Application_Start (Nav As NavigationController)
 	PagesManager.Initialize(NavControl)
 End Sub
 
-'Template version: B4i-1.0
-#Region Delegates
+'Template version: B4i-1.13
+#Region  Delegates
 Private Sub Application_Background
 	B4XPages.Delegate.Activity_Pause
 End Sub
