@@ -48,10 +48,6 @@ Private Sub B4XPage_KeyPress (KeyCode As Int) As Boolean 'ignore
 	Select KeyCode
 		Case KeyCodes.KEYCODE_BACK
 			'code to handle back key
-		Case KeyCodes.KEYCODE_VOLUME_DOWN, KeyCodes.KEYCODE_VOLUME_UP
-			'code to handle volume keys
-		Case KeyCodes.KEYCODE_MEDIA_PLAY_PAUSE
-			'code to handle media button
 		Case Else
 			Return False 'Pass to Android System
 	End Select
