@@ -10,13 +10,21 @@ Module1=|relative|..\B4XMainPage
 NumberOfFiles=1
 NumberOfLibraries=3
 NumberOfModules=1
-Version=10.3
+Version=10.5
 @EndOfDesignText@
-#Region Project Attributes 
-	#MainFormWidth: 600
-	#MainFormHeight: 600 
+'Product: Product Name
+'Version: 1.00
+'Platform: B4J
+'License: Unlicensed
+'Developer: Your Name
+#Region Project Attributes
+#MainFormWidth: 600
+#MainFormHeight: 600 
 #End Region
 
+#Region Additional Jars
+'#AdditionalJar: 
+#End Region
 Sub Process_Globals
 	Private fx As JFX
 	Private MainForm As Form
@@ -29,7 +37,7 @@ Sub AppStart (Form1 As Form, Args() As String)
 	PagesManager.Initialize(MainForm)
 End Sub
 
-'Template version: B4J-1.0
+'Template version: B4J-1.13
 #Region Delegates
 Sub MainForm_FocusChanged (HasFocus As Boolean)
 	B4XPages.Delegate.MainForm_FocusChanged(HasFocus)
