@@ -47,7 +47,7 @@ Private Sub Application_Start (Nav As NavigationController)
 	PagesManager.Initialize(NavControl)
 End Sub
 
-'Template version: B4i-1.13
+'Template version: B4i-1.14
 #Region  Delegates
 Private Sub Application_Background
 	B4XPages.Delegate.Activity_Pause
