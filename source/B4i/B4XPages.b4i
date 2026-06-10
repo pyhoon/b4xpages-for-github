@@ -26,7 +26,7 @@ Version=8.8
 	#MinVersion: 11
 #End Region
 
-#Region Certificates ProvisionFile
+#Region  Certificate/Provision
 	#If RELEASE
 	#CertificateFile: ios_distribution.cer
 	#ProvisionFile: Distribution.mobileprovision
@@ -47,8 +47,8 @@ Private Sub Application_Start (Nav As NavigationController)
 	PagesManager.Initialize(NavControl)
 End Sub
 
-'Template version: B4i-1.13
-#Region Delegates
+'Template version: B4i-1.14
+#Region  Delegates
 Private Sub Application_Background
 	B4XPages.Delegate.Activity_Pause
 End Sub
