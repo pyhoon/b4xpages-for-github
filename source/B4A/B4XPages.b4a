@@ -11,7 +11,12 @@ NumberOfLibraries=2
 NumberOfModules=1
 Version=13.5
 @EndOfDesignText@
-#Region  Project Attributes 
+'Product: Product Name
+'Version: 1.00
+'Platform: B4A
+'License: Unlicensed
+'Developer: Your Name
+#Region  Project Attributes
 	#ApplicationLabel: B4A
 	#VersionCode: 1
 	#VersionName: 
@@ -21,7 +26,7 @@ Version=13.5
 	'#BridgeLogger: True
 #End Region
 
-#Region  Activity Attributes 
+#Region  Activity Attributes
 	#FullScreen: False
 	#IncludeTitle: True
 #End Region
@@ -46,7 +51,7 @@ End Sub
 
 'Template version: B4A-1.13
 'Program code should go into B4XMainPage and other pages.
-#Region Delegates
+#Region  Delegates
 
 Sub Activity_ActionBarHomeClick
 	ActionBarHomeClicked = True
