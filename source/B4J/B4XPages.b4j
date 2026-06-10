@@ -55,7 +55,7 @@ Sub AppStart (Form1 As Form, Args() As String)
 	PagesManager.Initialize(MainForm)
 End Sub
 
-'Template version: B4J-1.13
+'Template version: B4J-1.14
 #Region  Delegates
 Sub MainForm_FocusChanged (HasFocus As Boolean)
 	B4XPages.Delegate.MainForm_FocusChanged(HasFocus)
