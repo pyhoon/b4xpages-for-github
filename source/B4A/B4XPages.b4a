@@ -49,7 +49,7 @@ Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
 	Return True
 End Sub
 
-'Template version: B4A-1.13
+'Template version: B4A-1.14
 'Program code should go into B4XMainPage and other pages.
 #Region  Delegates
 
